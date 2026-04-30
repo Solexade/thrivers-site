@@ -33,15 +33,3 @@ function closeMobile() {
   document.body.style.overflow = '';
 }
 
-// Close mobile menu on resize
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 900) closeMobile();
-});
-function openForm() {
-  document.getElementById("formModal").style.display = "block";
-  console.log("Join clicked"); // tracking
-}
-
-function closeForm() {
-  document.getElementById("formModal").style.display = "none";
-}
