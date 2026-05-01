@@ -33,3 +33,72 @@ function closeMobile() {
   document.body.style.overflow = '';
 }
 
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) closeMobile();
+});
+
+// ─── ANIMATED GOOGLE FORM (click to reveal) ───
+const formWrapper  = document.getElementById('formWrapper');
+const formToggle   = document.getElementById('formToggle');
+const formBody     = document.getElementById('formBody');
+const formIcon     = document.getElementById('formIcon');
+const formIframe   = document.getElementById('formIframe');
+const formLoading  = document.getElementById('formLoading');
+
+let formLoaded = false;
+
+formToggle.addEventListener('click', () => {
+  const isOpen = formWrapper.classList.toggle('open');
+
+  if (isOpen) {
+    // Update icon text
+    formIcon.textContent = '▲ Click to Close';
+
+    // Lazy-load the iframe only on first open
+    if (!formLoaded) {
+      formLoaded = true;
+      const src = formIframe.getAttribute('data-src');
+      formIframe.src = src;
+
+      // Show spinner until iframe loads
+      formIframe.addEventListener('load', () => {
+        formLoading.classList.add('hidden');
+        formIframe.classList.add('loaded');
+      }, { once: true });
+
+      // Fallback — hide spinner after 8s even if load event doesn't fire
+      setTimeout(() => {
+        formLoading.classList.add('hidden');
+        formIframe.classList.add('loaded');
+      }, 8000);
+    }
+
+    // Smooth scroll to form after animation starts
+    setTimeout(() => {
+      formWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+
+  } else {
+    formIcon.textContent = '▼ Click to Open';
+  }
+});
+
+// ─── ACTIVE NAV LINK ON SCROLL ───
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-links a');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + id) {
+          link.style.color = 'var(--gold)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(section => sectionObserver.observe(section));
