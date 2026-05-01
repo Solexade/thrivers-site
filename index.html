@@ -1,138 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Thrivers — Driven to Thrive. Built to Last.</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Thrivers — Driven to Thrive. Built to Last.</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#"><img src="logo.jpeg" class="nav-logo-img"/></a>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-left">
-
-    <h1 class="hero-headline">
-      Stop Talking About Growth.<br>
-      <span class="accent">Start Living It.</span>
-    </h1>
-
-    <p class="hero-sub">
-      No noise. No pressure. Just real accountability and progress.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#" onclick="openForm()" class="btn-primary">Join Now</a>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="closeMobile()">Home</a>
+        <a href="#about" onclick="closeMobile()">About</a>
+        <a href="#onboarding" onclick="closeMobile()">Join</a>
+        <a href="#creator" onclick="closeMobile()">Creator</a>
     </div>
 
-    <!-- SCARCITY -->
-    <p style="margin-top:10px; font-size:14px; opacity:0.7;">
-      ⚠ Limited intake this week
-    </p>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">
+            <img src="logo.jpeg" alt="The Thrivers Logo" class="nav-logo-img" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#onboarding">Join Us</a></li>
+            <li><a href="#creator">Creator</a></li>
+        </ul>
+        <a href="#onboarding" class="nav-cta">Get Started</a>
+        <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
 
-  </div>
-</section>
+    <!-- TAPE BANNER -->
+    <div class="tape-banner">
+        <div class="tape-track">
+            <span>DRIVEN TO THRIVE</span><span class="dot">✦</span>
+            <span>BUILT TO LAST</span><span class="dot">✦</span>
+            <span>STAY ACCOUNTABLE</span><span class="dot">✦</span>
+            <span>COMMIT TO YOUR GOALS</span><span class="dot">✦</span>
+            <span>THRIVE TOGETHER</span><span class="dot">✦</span>
+            <span>SHOW UP EVERY DAY</span><span class="dot">✦</span>
+            <span>NO NOISE. JUST PROGRESS.</span><span class="dot">✦</span>
+            <span>DRIVEN TO THRIVE</span><span class="dot">✦</span>
+            <span>BUILT TO LAST</span><span class="dot">✦</span>
+            <span>STAY ACCOUNTABLE</span><span class="dot">✦</span>
+            <span>COMMIT TO YOUR GOALS</span><span class="dot">✦</span>
+            <span>THRIVE TOGETHER</span><span class="dot">✦</span>
+            <span>SHOW UP EVERY DAY</span><span class="dot">✦</span>
+            <span>NO NOISE. JUST PROGRESS.</span><span class="dot">✦</span>
+        </div>
+    </div>
 
-<!-- MID CTA -->
-<section style="text-align:center; padding:50px 20px;">
-  <h2>Where you are is not where you have to stay.</h2>
-  <a href="#" onclick="openForm()" class="btn-primary">Join The Thrivers</a>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-
-    <div>
-      <h2>This isn’t motivation. It’s accountability.</h2>
-
-      <p>You don’t need more inspiration. You need consistency.</p>
-      <p>This is where execution happens.</p>
-
-      <div class="about-pillars">
-
-        <div class="pillar">
-          <h4>Daily Push</h4>
-          <p>Stay locked in</p>
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-left">
+            <div class="hero-eyebrow fade-up">Accountability Community</div>
+            <h1 class="hero-headline fade-up delay-1">
+                <span>Grow.</span>
+                <span class="accent">Commit.</span>
+                <span class="navy">Thrive.</span>
+            </h1>
+            <p class="hero-sub fade-up delay-2">
+                A space for people who are intentional about growth, discipline, and steady progress — no noise, no
+                pressure, just honest accountability.
+            </p>
+            <div class="hero-actions fade-up delay-3">
+                <a href="#onboarding" class="btn-primary">Join The Thrivers</a>
+                <a href="#about" class="btn-ghost">Learn More</a>
+            </div>
         </div>
 
-        <div class="pillar">
-          <h4>Weekly Sessions</h4>
-          <p>Reset & grow</p>
+        <div class="hero-right">
+            <div class="hero-grid-overlay"></div>
+            <div class="hero-big-text">THRIVE</div>
+            <div class="hero-stat-cards fade-up delay-1">
+                <div class="stat-card">
+                    <div class="num">100%</div>
+                    <div class="label">Accountability Rate</div>
+                    <div class="desc">Every member commits to showing up and following through</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">ZERO</div>
+                    <div class="label">Room For Excuses</div>
+                    <div class="desc">We reflect honestly, accept setbacks, and keep moving</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num">1 GOAL</div>
+                    <div class="label">Steady Progress</div>
+                    <div class="desc">Clarify your goals, commit to them, and follow through</div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="pillar">
-          <h4>Real Community</h4>
-          <p>No hiding</p>
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <div>
+                <div class="section-label fade-up">Who We Are</div>
+                <h2 class="about-heading fade-up delay-1">This Is <em>Not</em> A Hype Space.</h2>
+                <p class="about-text fade-up delay-2">
+                   The Thrivers is a growth driven community founded in November 2025 to help individuals rise beyond limitations and become who they are meant to be.
+
+We are a movement built on accountability, consistency, and real transformation. We believe your current position is not your final destination, and with the right mindset and discipline, growth is always possible.
+
+Through daily motivation and weekly live sessions, we keep individuals focused, aligned, and committed to their growth journey.
+                </p>
+                <p class="about-text fade-up delay-2">
+                   We stand for progress over mediocrity, resilience over excuses, and growth through every challenge. This is a space for those who are ready to take responsibility, stay disciplined, and keep moving forward. If you refuse to quit and are ready to grow, you belong here.
+
+You are Driven to Thrive and Built to Last.
+                </p>
+                <div class="about-pillars fade-up delay-3">
+                    <div class="pillar">
+                        <div class="pillar-icon">🎯</div>
+                        <h4>Goal Setting</h4>
+                        <p>Clarify what you want and commit to it clearly</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">📋</div>
+                        <h4>Check-ins</h4>
+                        <p>Regular accountability updates to keep you on track</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">🤝</div>
+                        <h4>Encouragement</h4>
+                        <p>Honest support through highs, lows, and everything between</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">💬</div>
+                        <h4>Conversations</h4>
+                        <p>Thoughtful dialogue that pushes you to act, not just plan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-quote-side fade-up delay-2">
+                <blockquote class="big-quote">
+                    Everyone here is responsible for showing up, staying respectful, and contributing meaningfully.
+                </blockquote>
+                <div class="about-rules">
+                    <h3>The Community Standards</h3>
+                    <ul>
+                        <li>Show up consistently — not perfectly</li>
+                        <li>Be honest about where you are, not where you wish you were</li>
+                        <li>Encourage others through their setbacks, not just their wins</li>
+                        <li>Contribute meaningfully to every conversation</li>
+                        <li>Respect the space and the people in it</li>
+                        <li>Act on your plans — don't just talk about them</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
-    </div>
+    <!-- ONBOARDING -->
+    <section id="onboarding">
+        <div class="onboarding-inner">
+            <div>
+                <div class="section-label fade-up">Ready to Begin?</div>
+                <h2 class="onboarding-heading fade-up delay-1">Join The Thrivers Community</h2>
+                <p class="onboarding-desc fade-up delay-2">
+                    Fill out the form to get started. Tell us about your goals, your current season, and what you're
+                    committing to. We'll reach out with next steps.
+                </p>
+                <div class="steps fade-up delay-3">
+                    <div class="step">
+                        <div class="step-num">01</div>
+                        <div class="step-info">
+                            <h4>Fill the Form</h4>
+                            <p>Share your name, goals, and what accountability means to you</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">02</div>
+                        <div class="step-info">
+                            <h4>Get Welcomed</h4>
+                            <p>You'll receive a welcome message with community access details</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">03</div>
+                        <div class="step-info">
+                            <h4>Start Showing Up</h4>
+                            <p>Set your goals, check in regularly, and grow with your people</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div>
-      <blockquote>
-        Your current reality is not your final identity.
-      </blockquote>
-    </div>
+            <div class="fade-up delay-2">
+                <div class="form-wrapper">
+                    <div class="form-header">
+                        <span>✦ ONBOARDING FORM — THE THRIVERS</span>
+                    </div>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfod7IXkTxPmNKPq8vCLxPtys7umI5gBSynueD8tZIuK8Rkyw/viewform?embedded=true"
+                        title="The Thrivers Onboarding Form" loading="lazy">
+                        Loading…
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
-</section>
+    <!-- CREATOR PROFILE -->
+    <section id="creator">
+        <div class="creator-inner">
+            <div class="creator-visual fade-up">
+                <div class="creator-img-frame">
+                    <img src="founder.jpeg" alt="Ayeni Joshua Adaviriku — Founder, The Thrivers"
+                        class="founder-photo" />
+                </div>
+                <div class="creator-badge">Founder · The Thrivers</div>
+            </div>
 
-<!-- TESTIMONIAL -->
-<section style="padding:60px 20px; text-align:center;">
-  <h2>Real Growth</h2>
-  <blockquote>
-    “I stopped procrastinating and started executing.”
-  </blockquote>
-</section>
+            <div class="creator-info fade-up delay-2">
+                <div class="section-label">Meet The Visionary</div>
+                <h2 class="creator-name">Ayeni Joshua<br>Adaviriku</h2>
+                <p class="creator-title">Founder of The Thrivers · Growth Advocate · Community Builder</p>
+                <p class="creator-bio">
+                   Meet Our Visionary Ayeni Joshua Adaviriku is the visionary behind The Thrivers, launched in November 2025 from a strong conviction to see people grow, succeed, and rise beyond their current realities.
+What started as a desire to help people do more with their lives has grown into a platform focused on accountability, consistency, and real transformation. His vision is simple, to remind people daily that they are capable of more and that their present situation is not their final destination.
 
-<!-- FINAL CTA -->
-<section style="text-align:center; padding:60px 20px;">
-  <h2>Ready to become more?</h2>
-  <a href="#" onclick="openForm()" class="btn-primary">Join Now</a>
-</section>
+                </p>
+                <p class="creator-bio">
+                   Driven by a passion for growth and meaningful change, he built The Thrivers to challenge mediocrity and promote intentional living through daily motivation and weekly live sessions.
 
-<!-- CREATOR -->
-<section id="creator">
-  <div class="creator-inner">
+Through his leadership, The Thrivers continues to guide individuals to stay disciplined, overcome challenges, and move forward with purpose.
 
-    <div>
-      <img src="founder.jpeg" class="founder-photo"/>
-    </div>
+You are Driven to Thrive and Built to Last.
+                </p>
+                <div class="creator-quote">
+                    "You are Driven to Thrive and Built to Last."
+                </div>
+                <div class="creator-socials">
+                    <a href="https://www.facebook.com/share/1YnqTaGqKx/" target="_blank" rel="noopener"
+                        class="social-link fb">◈ Facebook</a>
+                    <a href="https://whatsapp.com/channel/0029VbBkkkpJuyA35yrmOZ1b" target="_blank" rel="noopener"
+                        class="social-link wa">◉ WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/ayeni-joshua-adaviriku" target="_blank" rel="noopener"
+                        class="social-link li">◈ LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div>
-      <h2>Ayeni Joshua</h2>
-      <p>Built to challenge how you live—with discipline and accountability.</p>
-    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="logo.jpeg" alt="The Thrivers" class="footer-logo-img" />
+                <p>An accountability space for people who are intentional about growth, discipline, and steady progress.
+                    Show up. Commit. Thrive.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#onboarding">Join Us</a></li>
+                    <li><a href="#creator">Creator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/1YnqTaGqKx/" target="_blank" rel="noopener">Facebook</a>
+                    </li>
+                    <li><a href="https://whatsapp.com/channel/0029VbBkkkpJuyA35yrmOZ1b" target="_blank"
+                            rel="noopener">WhatsApp Channel</a></li>
+                    <li><a href="https://www.linkedin.com/in/ayeni-joshua-adaviriku" target="_blank"
+                            rel="noopener">LinkedIn</a></li>
+                    <li><a href="#onboarding">Join Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 The Thrivers. All rights reserved.</span>
+            <span class="made">Driven to Thrive. Built to Last. <span class="heart">♥</span></span>
+        </div>
+        <div class="footer-watermark">THRIVE</div>
+    </footer>
 
-  </div>
-</section>
-
-<!-- MODAL FORM -->
-<div id="formModal" class="modal">
-  <div class="modal-content">
-
-    <span class="close" onclick="closeForm()">&times;</span>
-
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfod7IXkTxPmNKPq8vCLxPtys7umI5gBSynueD8tZIuK8Rkyw/viewform?embedded=true">
-    </iframe>
-
-  </div>
-</div>
-
-<!-- STICKY CTA -->
-<div class="sticky-cta">
-  <a href="#" onclick="openForm()" class="btn-primary">Join Now</a>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
