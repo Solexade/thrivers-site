@@ -9,12 +9,39 @@
 </head>
 <body>
 
+  <!-- ─── CHALLENGE REGISTRATION MODAL ─── -->
+  <div class="modal-overlay" id="challengeModal" role="dialog" aria-modal="true" aria-label="30 Days Challenge Registration">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="modal-badge">🌱 JUNE 2026</span>
+          <h3 class="modal-title">30 Days Consistency Challenge</h3>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Close form">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-loading" id="modalLoading">
+          <div class="modal-spinner"></div>
+          <p>Loading registration form...</p>
+        </div>
+        <iframe
+          id="challengeIframe"
+          data-src="https://docs.google.com/forms/d/e/1FAIpQLScD8bcknIq_Vv_R674IuBBH5U_HWq8g82bFo42VvrSBHuFKVQ/viewform?embedded=true"
+          title="30 Days Consistency Challenge Registration"
+          frameborder="0">
+          Loading…
+        </iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#hero" onclick="closeMobile()">Home</a>
     <a href="#about" onclick="closeMobile()">About</a>
     <a href="#vision" onclick="closeMobile()">Vision</a>
     <a href="#mission" onclick="closeMobile()">Mission</a>
+    <a href="#challenge" onclick="closeMobile()">Challenge</a>
     <a href="#onboarding" onclick="closeMobile()">Join</a>
     <a href="#creator" onclick="closeMobile()">Creator</a>
   </div>
@@ -33,10 +60,11 @@
           <li><a href="#mission">Mission</a></li>
         </ul>
       </li>
+      <li><a href="#challenge" class="nav-challenge-link">🌱 Challenge</a></li>
       <li><a href="#onboarding">Join Us</a></li>
       <li><a href="#creator">Creator</a></li>
     </ul>
-    <a href="#onboarding" class="nav-cta">Get Started</a>
+    <a href="#challenge" class="nav-cta nav-cta-challenge">Join Challenge</a>
     <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -47,15 +75,19 @@
     <div class="tape-track">
       <span>DRIVEN TO THRIVE</span><span class="dot">✦</span>
       <span>BUILT TO LAST</span><span class="dot">✦</span>
+      <span>30 DAYS CONSISTENCY CHALLENGE</span><span class="dot">🌱</span>
       <span>STAY ACCOUNTABLE</span><span class="dot">✦</span>
       <span>COMMIT TO YOUR GOALS</span><span class="dot">✦</span>
+      <span>JUNE 2026</span><span class="dot">✦</span>
       <span>THRIVE TOGETHER</span><span class="dot">✦</span>
       <span>SHOW UP EVERY DAY</span><span class="dot">✦</span>
       <span>NO NOISE. JUST PROGRESS.</span><span class="dot">✦</span>
       <span>DRIVEN TO THRIVE</span><span class="dot">✦</span>
       <span>BUILT TO LAST</span><span class="dot">✦</span>
+      <span>30 DAYS CONSISTENCY CHALLENGE</span><span class="dot">🌱</span>
       <span>STAY ACCOUNTABLE</span><span class="dot">✦</span>
       <span>COMMIT TO YOUR GOALS</span><span class="dot">✦</span>
+      <span>JUNE 2026</span><span class="dot">✦</span>
       <span>THRIVE TOGETHER</span><span class="dot">✦</span>
       <span>SHOW UP EVERY DAY</span><span class="dot">✦</span>
       <span>NO NOISE. JUST PROGRESS.</span><span class="dot">✦</span>
@@ -75,7 +107,7 @@
         A space for people who are intentional about growth, discipline, and steady progress — no noise, no pressure, just honest accountability.
       </p>
       <div class="hero-actions fade-up delay-3">
-        <a href="#onboarding" class="btn-primary">Join The Thrivers</a>
+        <a href="#challenge" class="btn-primary">🌱 Join the Challenge</a>
         <a href="#about" class="btn-ghost">Learn More</a>
       </div>
     </div>
@@ -95,9 +127,9 @@
           <div class="desc">We reflect honestly, accept setbacks, and keep moving</div>
         </div>
         <div class="stat-card">
-          <div class="num">1 GOAL</div>
-          <div class="label">Steady Progress</div>
-          <div class="desc">Clarify your goals, commit to them, and follow through</div>
+          <div class="num">30</div>
+          <div class="label">Days · June Challenge</div>
+          <div class="desc">Build real habits, break the cycle — starting June 1st</div>
         </div>
       </div>
     </div>
@@ -157,7 +189,7 @@
     </div>
   </section>
 
-  <!-- ─── VISION SECTION ─── -->
+  <!-- VISION -->
   <section id="vision">
     <div class="vm-hero">
       <div class="vm-hero-left">
@@ -190,7 +222,7 @@
     </div>
   </section>
 
-  <!-- ─── MISSION SECTION ─── -->
+  <!-- MISSION -->
   <section id="mission">
     <div class="mission-inner">
       <div class="mission-top fade-up">
@@ -200,7 +232,6 @@
           To equip, encourage, and hold individuals accountable as they pursue growth in every area of their lives — ensuring no one walks their growth journey alone, but is instead supported, challenged, and reminded daily they are capable of more.
         </p>
       </div>
-
       <div class="mission-pillars fade-up delay-1">
         <div class="m-pillar">
           <div class="m-num">01</div>
@@ -227,12 +258,151 @@
           <p>Members own their progress, build lasting habits, and commit to showing up for themselves every single day.</p>
         </div>
       </div>
-
       <div class="mission-banner fade-up delay-2">
         <span class="mb-text">The Thrivers exists to ensure that no one walks their growth journey alone.</span>
         <a href="#onboarding" class="btn-primary">Join The Movement</a>
       </div>
     </div>
+  </section>
+
+  <!-- ─── 30 DAYS CHALLENGE SECTION ─── -->
+  <section id="challenge">
+
+    <div class="challenge-flame-bar">
+      <span>🌱 30 DAYS CONSISTENCY CHALLENGE</span>
+      <span>✦ JUNE 2026</span>
+      <span>🌱 THE THRIVERS</span>
+      <span>✦ FREE TO JOIN</span>
+      <span>🌱 30 DAYS CONSISTENCY CHALLENGE</span>
+      <span>✦ JUNE 2026</span>
+      <span>🌱 THE THRIVERS</span>
+      <span>✦ FREE TO JOIN</span>
+    </div>
+
+    <div class="challenge-inner">
+
+      <!-- LEFT -->
+      <div class="challenge-left">
+        <div class="section-label fade-up" style="color:var(--tape);">June 2026</div>
+        <h2 class="challenge-heading fade-up delay-1">
+          30 Days.<br>
+          <em>No Excuses.</em><br>
+          Real Results.
+        </h2>
+
+        <div class="challenge-truth fade-up delay-2">
+          <div class="truth-bar"></div>
+          <div>
+            <p class="truth-label">Here's the truth:</p>
+            <p class="truth-text">Good goals do not automatically produce good results. Results come from <strong>consistency, accountability, structure,</strong> and <strong>daily action.</strong></p>
+          </div>
+        </div>
+
+        <p class="challenge-desc fade-up delay-2">
+          Since January, have you been setting goals, making plans, writing visions… yet still feel stuck with little or nothing to show for it? This challenge is for people who are tired of starting and stopping — people who genuinely want to make progress.
+        </p>
+
+        <!-- LIVE COUNTDOWN -->
+        <div class="countdown-wrap fade-up delay-3">
+          <p class="countdown-label">Challenge Begins In</p>
+          <div class="countdown" id="countdown">
+            <div class="cd-box">
+              <span class="cd-num" id="cd-days">00</span>
+              <span class="cd-unit">Days</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="cd-box">
+              <span class="cd-num" id="cd-hours">00</span>
+              <span class="cd-unit">Hours</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="cd-box">
+              <span class="cd-num" id="cd-mins">00</span>
+              <span class="cd-unit">Mins</span>
+            </div>
+            <div class="cd-sep">:</div>
+            <div class="cd-box">
+              <span class="cd-num" id="cd-secs">00</span>
+              <span class="cd-unit">Secs</span>
+            </div>
+          </div>
+          <p class="countdown-sub" id="countdown-sub">June 1, 2026 — The journey starts.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="challenge-right fade-up delay-2">
+
+        <div class="challenge-gets">
+          <h3 class="gets-title">For 30 days, we will help you:</h3>
+          <ul class="gets-list">
+            <li><span class="gets-icon">🌱</span><span>Stay accountable every single day</span></li>
+            <li><span class="gets-icon">🌱</span><span>Build productive habits that actually stick</span></li>
+            <li><span class="gets-icon">🌱</span><span>Break goals into actionable daily steps</span></li>
+            <li><span class="gets-icon">🌱</span><span>Stay focused, disciplined and on track</span></li>
+            <li><span class="gets-icon">🌱</span><span>Stop procrastinating and drifting for good</span></li>
+          </ul>
+        </div>
+
+        <div class="challenge-who">
+          <h3 class="who-title">This challenge is for you if:</h3>
+          <div class="who-tags">
+            <span class="who-tag">You keep starting over</span>
+            <span class="who-tag">Goals feel unreachable</span>
+            <span class="who-tag">You want real progress</span>
+            <span class="who-tag">You're tired of drifting</span>
+            <span class="who-tag">You need structure</span>
+            <span class="who-tag">You're ready to show up</span>
+          </div>
+        </div>
+
+        <!-- CTA CARD WITH MODAL TRIGGER BUTTON -->
+        <div class="challenge-cta-card">
+          <div class="cta-card-top">
+            <span class="cta-badge">🌱 FREE TO JOIN</span>
+            <span class="cta-badge cta-badge-alt">JUNE 2026</span>
+          </div>
+          <p class="cta-card-msg">
+            Don't sit out another month hoping things will magically change.<br>
+            <strong>You need structure, action, and people who will keep you on track.</strong>
+          </p>
+
+          <!-- THE BIG REGISTER BUTTON -->
+          <button class="btn-register-now" id="openChallengeModal">
+            <span class="btn-register-icon">🌱</span>
+            Click Here to Register Now
+            <span class="btn-register-arrow">→</span>
+          </button>
+
+          <p class="cta-card-sub">You're driven to Thrive 🌱 · Free · No commitment needed to explore</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div class="challenge-strip fade-up">
+      <div class="strip-item">
+        <span class="strip-num">30</span>
+        <span class="strip-label">Days of Action</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-num">1</span>
+        <span class="strip-label">Community Behind You</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-num">0</span>
+        <span class="strip-label">Room for Excuses</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-num">∞</span>
+        <span class="strip-label">Potential Unlocked</span>
+      </div>
+    </div>
+
   </section>
 
   <!-- ONBOARDING -->
@@ -270,7 +440,6 @@
       </div>
 
       <div class="fade-up delay-2">
-        <!-- ANIMATED FORM — click to reveal -->
         <div class="form-wrapper" id="formWrapper">
           <div class="form-header" id="formToggle">
             <span>✦ ONBOARDING FORM — THE THRIVERS</span>
@@ -340,6 +509,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#vision">Vision</a></li>
           <li><a href="#mission">Mission</a></li>
+          <li><a href="#challenge">30 Day Challenge</a></li>
           <li><a href="#onboarding">Join Us</a></li>
           <li><a href="#creator">Creator</a></li>
         </ul>
@@ -350,7 +520,7 @@
           <li><a href="https://www.facebook.com/share/1YnqTaGqKx/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a href="https://whatsapp.com/channel/0029VbBkkkpJuyA35yrmOZ1b" target="_blank" rel="noopener">WhatsApp Channel</a></li>
           <li><a href="https://www.linkedin.com/in/ayeni-joshua-adaviriku" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#onboarding">Join Us</a></li>
+          <li><a href="#challenge">🌱 June Challenge</a></li>
         </ul>
       </div>
     </div>
